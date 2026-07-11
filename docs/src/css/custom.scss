@@ -1,0 +1,247 @@
+@import url('./footer.scss');
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0DECC2;
+  --ifm-color-primary-dark: #09A98B;
+  --ifm-color-primary-darker: #00c9a6;
+  --ifm-color-primary-darkest: #00a588;
+  --ifm-font-family-monospace: "Space Grotesk";
+  --ifm-font-family-base: "Space Grotesk";
+  --ifm-global-radius: 0.5rem;
+  --ifm-card-border-radius: var(--ifm-global-radius);
+  --ifm-code-border-radius: 0.25rem;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-heading-vertical-rhythm-bottom: 1.5rem;
+  --ifm-list-item-margin: 0.5rem;
+  --ifm-navbar-height: 5rem;
+  --ifm-container-width-xl: 1152px;
+  --ifm-table-border-color: rgba(255, 255, 255, 0.05);
+  --ifm-table-head-background: #16161D;
+  --ifm-table-cell-background: #16161D;
+  --ifm-table-stripe-background: #16161D !important;
+  --ifm-table-background: #16161D;
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.05) !important;
+
+  /* Menu */
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --ifm-menu-link-padding-horizontal: 1rem;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #111218 !important;
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.05) !important;
+  --ifm-heading-color: #F3F4F8;
+  --ifm-font-color-base: #F3F4F8;
+  --ifm-navbar-background-color: rgba(16, 18, 25, 0.8);
+  --ifm-footer-background-color: #101219;
+  --ifm-card-background-color: #16161D;
+  --ifm-hero-background-color: #03060d;
+
+  /* Menu */
+  --ifm-menu-color-background-active: hsla(170, 100%, 46%, 0.1);
+
+  /* Card style */
+  .card, .pagination-nav__link {
+    background-color: var(--ifm-card-background-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--ifm-toc-border-color);
+
+    &:hover {
+      background-color: var(--ifm-toc-border-color);
+      border-color: var(--ifm-toc-border-color);
+    }
+  }
+
+  .menu__caret:before, .menu__link--sublist-caret:before, .menu__link--sublist-caret:after {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200 !important;
+  color: var(--ifm-heading-color);
+}
+
+.hero {
+  margin-top: calc(var(--ifm-navbar-height) * -1);
+}
+
+.hero__title {
+  margin-top: 5rem;
+  font-size: 2.5rem !important;
+}
+
+/* Utils */
+.h-100 {
+  height: 100%;
+}
+
+p {
+  opacity: 0.8;
+
+  img {
+    opacity: 1 !important;
+  }
+}
+
+
+/* Markdown styles */
+.markdown {
+  iframe, img {
+    border-radius: var(--ifm-global-radius);
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  // --ifm-heading-vertical-rhythm-top: 1.5rem;
+  --ifm-heading-vertical-rhythm-bottom: 1;
+  --ifm-h1-vertical-rhythm-top: 2.5;
+  --ifm-h1-vertical-rhythm-bottom: 1.5;
+  --ifm-h2-vertical-rhythm-top: 2;
+  --ifm-h2-vertical-rhythm-bottom: 1.5;
+  --ifm-h3-vertical-rhythm-top: 2.5;
+  --ifm-h3-vertical-rhythm-bottom: 1.5;
+  --ifm-h4-vertical-rhythm-top: 1.2;
+  --ifm-h4-vertical-rhythm-bottom: 1.5;
+
+  li {
+    opacity: 0.7;
+  }
+}
+
+.pagination-nav {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.pagination-nav__label {
+  padding-top: 0.5rem;
+  font-weight: 300;
+}
+
+.pagination-nav__link--next .pagination-nav__label::after {
+  content: "→";
+  padding-left: 0.25rem;
+}
+
+.pagination-nav__link--prev .pagination-nav__label::before {
+  content: "←";
+  padding-right: 0.25rem;
+}
+
+/* Footer styles */
+.footer__links {
+  text-align: center;
+}
+
+/* Social media styles */
+.header-github-link, .header-discord-link {
+  height: 2rem;
+  padding: 0 0.75rem;
+
+  &:hover {
+    opacity: .6
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: 1.5rem 1.5rem;
+  }
+}
+
+.header-github-link:before {
+  background-image: url('/icons/github.svg');
+}
+
+.header-discord-link {
+  padding-right: 0 !important;
+}
+
+.header-discord-link:before {
+  background-image: url('/icons/discord.svg');
+}
+
+/* Sidebar font size customization */
+.menu__link {
+  font-weight: 400 !important;
+}
+
+/* For nested menu items */
+.menu__list-item .menu__list-item .menu__link {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  opacity: 0.8;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+
+  .navbar__item {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.90rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s ease;
+    padding-right: 2rem;
+    padding-left: 1.5rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.navbar__toggle {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.clean-btn {
+  
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(16, 18, 25, 0.1) !important;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Ensure navbar stays on top */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.homepage-blur-gradient {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: -3rem;
+  border-radius: 9999px;
+  filter: blur(32px);
+  z-index: 1000;
+  height: 100px;
+  width: 50%;
+  opacity: 0.5;
+  background: linear-gradient(to bottom, #56AEFF, var(--ifm-background-color), var(--ifm-background-color));
+}

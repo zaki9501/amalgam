@@ -1,0 +1,80 @@
+{
+  "Interest": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "Validation": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "Liquidation": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "TimelockController": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "SaturationAndGeometricTWAPState": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "TransparentUpgradeableProxy": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "AmmalgamPair": {
+    "match": "match",
+    "creationMatch": "match",
+    "runtimeMatch": "match",
+    "name": "AmmalgamPair",
+    "sources": [
+      "lib/core-v1/contracts/AmmalgamPair.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol"
+    ],
+    "n_sources": 48,
+    "stdJson": true
+  },
+  "PairLockedLoans": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "PairBlockLendingFundRemoval": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "PairFrozen": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "BeaconController": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "HookRegistry": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "ERC20LiquidityTokenFactory": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "ERC4626DepositTokenFactory": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "ERC4626DebtTokenFactory": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "ERC20DebtLiquidityTokenFactory": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "AmmalgamFactory": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "PeripheralLending": {
+    "match": "exact_match",
+    "creationMatch": "exact_match",
+    "runtimeMatch": "exact_match",
+    "name": "PeripheralLending",
+    "sources": [
+      "lib/peripheral-v1/contracts/PeripheralLending.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "lib/core-v1/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol"
+    ],
+    "n_sources": 34,
+    "stdJson": true
+  }
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "_factory",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_wrappedNativeToken",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "receive",
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "computeExpectedSwapAmountIn",
+    "inputs": [
+      {
+        "name": "swapAmountOut",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reserveIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "referenceReserveIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reserveOut",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "missingIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "missingOut",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "computeExpectedSwapAmountOut",
+    "inputs": [
+      {
+        "name": "swapAmountIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reserveIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "referenceReserveIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "reserveOut",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "missingIn",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "missingOut",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "swapFromNative",
+    "inputs": [
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct IPeripheralSwapHelper.SwapSingleParams",
+        "components": [
+          {
+            "name": "to",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenIn",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenOut",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "amountIn",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minAmountOut",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "swapHelper",
+    "inputs": [
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct IPeripheralSwapHelper.SwapSingleParams",
+        "components": [
+          {
+            "name": "to",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenIn",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenOut",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "amountIn",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minAmountOut",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "swapToNative",
+    "inputs": [
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct IPeripheralSwapHelper.SwapSingleParams",
+        "components": [
+          {
+            "name": "to",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenIn",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "tokenOut",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "amountIn",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minAmountOut",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "error",
+    "name": "ExceededExpectedIterations",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidNativeSwap",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidPair",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidSender",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MissingGteActual",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MissingOutGteReserveOut",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "SafeERC20FailedOperation",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "SlippageExceeded",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "SwapAmountOutExceedsAvailable",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "UnwrapFailed",
+    "inputs": []
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "match": "exact_match",
+  "creationMatch": "exact_match",
+  "runtimeMatch": "exact_match",
+  "name": "PeripheralLending",
+  "sources": [
+    "lib/peripheral-v1/contracts/PeripheralLending.sol",
+    "lib/core-v1/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+    "lib/core-v1/lib/openzeppelin-contracts/contracts/interfaces/IERC4626.sol",
+    "lib/core-v1/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+    "lib/core-v1/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol"
+  ],
+  "n_sources": 34,
+  "stdJson": true,
+  "address": "0x4be3df5bd57ab5849b9da1941bac297ce5fa4bc2"
+}
